@@ -1,0 +1,371 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2.5rem;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.secciones-botones-navegacion a{
+    text-decoration: none;
+    color: #4B44FF;
+}
+
+.secciones-botones-navegacion a:hover{
+    text-decoration: underline;
+}
+
+.imagen-cabecera img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #9466f0; /* Color de fondo morado */
+    
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    padding-top: 20px; /* Mantenemos el relleno superior de 20px */
+    padding-bottom: 20px; /* Mantenemos el relleno inferior de 20px */
+    padding-left: 10px; /* Reducimos el relleno izquierdo a 10px */
+    padding-right: 10px; /* Reducimos el relleno derecho a 10px */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #8B53F5;
+    margin: 20px; /* Margen de 20px alrededor del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container .secciones-botones-navegacion {
+    display: flex;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.container .secciones-botones-navegacion a{
+    font-size: 16px;
+    
+}
+
+.container .secciones-botones-navegacion :nth-child(1){
+    margin-right: 60px;
+}
+
+.container .secciones-botones-navegacion :nth-child(2){
+    margin-left: 35px;
+}
+
+.main-logo{
+    margin-bottom: 20px;
+}
+
+
+.container .main-logo img{
+    height: 100px;
+    width: 100px;
+}
+
+.secciones-botones-entrar {
+    text-align: center; /* Centra el contenido del contenedor */
+}
+
+.secciones-botones-entrar input[type="submit"] {
+    /* Opcional: Estilos adicionales para el botón */
+    width: auto; /* Ancho automático para adaptarse al contenido */
+    
+}
+
+.box-input input[type="text"],
+.box-input input[type="password"] {
+    border: 1px solid #848484; /* Borde medio plomo */
+    border-radius: 20px; /* Bordes circulares */
+    padding: 10px 15px; /* Ajuste de relleno */
+    width: 100%; /* Ancho completo del contenedor */
+    box-sizing: border-box; /* Incluir el borde en el ancho total */
+}
+
+/* Estilo para los botones de submit */
+.secciones-botones-entrar input[type="submit"] {
+    border: 1px solid #848484; /* Borde medio plomo */
+    border-radius: 20px; /* Bordes circulares */
+    padding: 10px 20px; /* Ajuste de relleno */
+    background-color: transparent; /* Fondo transparente */
+    color: #848484; /* Color de texto */
+    cursor: pointer; /* Cursor al pasar */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+.secciones-botones-entrar input[type="submit"]:hover {
+    background-color: #848484; /* Cambio de color de fondo al pasar */
+    color: #fff; /* Cambio de color de texto al pasar */
+}
+
+.box-input {
+    position: relative; /* Posiciona el contenedor */
+}
+
+.icon-eye-1 {
+    position: absolute; /* Posiciona el ícono */
+    right: 10px; /* Ajusta la posición desde el lado derecho */
+    top: 50%; /* Alinea verticalmente al centro */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+}
+
+.icon-eye-2 {
+    position: absolute; /* Posiciona el ícono */
+    right: 10px; /* Ajusta la posición desde el lado derecho */
+    top: 50%; /* Alinea verticalmente al centro */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+}
+
+.secciones-botones-entrar{
+    margin-top: 30px;
+}
+
+/*
+.main-logo img {
+    width: 150px; 
+    height: auto; 
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+h3 {
+    text-align: center; 
+    font-size: 18px; 
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+}
+
+.linea {
+    border: none; 
+    height: 2.5px; 
+    background-color: #9466f0; 
+    margin: 20px 0; 
+}
+
+.text-input {
+    color: #625d5d;
+    margin-top: 10px;
+    margin-bottom: 5px; 
+    text-align: left;
+}*/
+
+/*
+input {
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #000; 
+    padding-right: 0;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+input[type="text"],
+input[type="password"] {
+    margin-top: 0.1px;
+    margin-bottom: 15px;
+    padding-right: 0;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.box-input {
+    display: flex;
+    align-items: center; 
+}
+
+.icon-eye-1,
+.icon-eye-2 {
+    margin-left: 10px; 
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #9466f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+input[type="submit"]:hover {
+    background-color: #a078f1;
+    animation: bounce 0.4s;
+}
+
+.secciones-botones-entrar {
+    display: flex;
+}
+
+.crear-cuenta {
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.crear-cuenta p {
+    margin: 0; 
+}
+
+#creala-aqui {
+    text-decoration: none;
+    color: #a078f1;
+}
+
+#creala-aqui:hover {
+    text-decoration: underline;
+    color: #a078f1;
+}
+*/
+
+
+/*
+.main-logo img {
+    width: 150px; 
+    height: auto; 
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+h3 {
+    text-align: center; 
+    font-size: 18px; 
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+}
+
+.linea {
+    border: none; 
+    height: 2.5px; 
+    background-color: #9466f0; 
+    margin: 20px 0; 
+}
+
+.text-input {
+    color: #625d5d;
+    margin-top: 10px;
+    margin-bottom: 5px; 
+    text-align: left;
+}*/
+
+/*
+input {
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #000; 
+    padding-right: 0;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+input[type="text"],
+input[type="password"] {
+    margin-top: 0.1px;
+    margin-bottom: 15px;
+    padding-right: 0;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.box-input {
+    display: flex;
+    align-items: center; 
+}
+
+.icon-eye-1,
+.icon-eye-2 {
+    margin-left: 10px; 
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #9466f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+input[type="submit"]:hover {
+    background-color: #a078f1;
+    animation: bounce 0.4s;
+}
+
+.secciones-botones-entrar {
+    display: flex;
+}
+
+.crear-cuenta {
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.crear-cuenta p {
+    margin: 0; 
+}
+
+#creala-aqui {
+    text-decoration: none;
+    color: #a078f1;
+}
+
+#creala-aqui:hover {
+    text-decoration: underline;
+    color: #a078f1;
+}
+*/

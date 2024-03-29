@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../assets/fondo_alzhivida.png");
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .main-logo {
+    text-align: center; /* Centra horizontalmente el contenido */
+}
+
+.main-logo img {
+    width: 150px; /* ajusta el tamaño de la imagen según tus necesidades */
+    height: auto; /* mantén la relación de aspecto original */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.linea {
+    border: none; /* Elimina el borde predeterminado */
+    height: 2.5px; /* Define el grosor de la línea */
+    background-color: #9466f0; /* Define el color de la línea */
+    margin: 20px 0; /* Añade espacio superior e inferior */
+    
+}
+
+.text-input {
+    color: #625d5d;
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 0px; /* Reducir el margen inferior */
+}
+
+input {
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #000; /* Solo el borde inferior */
+    padding-right: 0;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    margin-top: 0.1px;
+    margin-bottom: 15px;
+    padding-right: 0;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0; /* Reducir la curvatura de los bordes */
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color:#9466f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #a078f1;
+}
+
+/* Agrega el siguiente estilo para colocar las imágenes de los ojos a la derecha del input */
+.box-input {
+    position: relative;
+}
+
+.icon-eye-1,
+.icon-eye-2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px; /* Ajusta la distancia a la derecha según sea necesario */
+    
+}
+
+#crear-cuenta{
+    display: flex;
+    justify-content: flex-start;
+}
+
+a{
+   font-size: 15px;
+   margin-top: 15px; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   color: #625d5d;
+}
+
+span{
+    color: #a078f1;
+}
+
+span:hover{
+    text-decoration: underline;
+}
+

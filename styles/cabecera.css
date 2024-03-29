@@ -1,0 +1,78 @@
+body{
+    background-color: blueviolet;
+}
+
+
+
+.cabecera-usuario{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: baseline;
+    background-color: #9269DD
+}
+
+.cabecera-usuario p{
+    color: white;
+    margin-right: 3px;
+}
+
+h1{
+    background-color: #9269DD;
+    margin-left: 10px;
+    color:white;
+}
+
+#titulo-categorias{
+    color: #fffff0f5;
+}
+
+
+.cabecera-global{
+    background-color: #9269DD;
+}
+
+.cabecera .cabecera-usuario img{
+    width: 80px;
+}
+
+.cabecera-categorias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: #9269DD
+}
+
+#subtitulo-categoria{
+    color: whitesmoke;
+    margin-top: 15px;
+}
+
+/* Cambiar el color del SVG */
+.iconos-boton path {
+    fill: black; /* Cambia el color del SVG a rojo */
+}
+
+/* Cambiar el tamaño del SVG */
+.iconos-boton {
+    width: 50px; /* Cambia el ancho del SVG a 50px */
+    height: 50px; /* Cambia la altura del SVG a 50px */
+    text-align: center;
+}
+
+/* Centrar horizontalmente el contenido */
+.boton-especialistas, .boton-azlhibot, .boton-interactua, .boton-paciente {
+    text-align: center;
+    background-color: white;
+}
+
+
+
+    
+
+
+
