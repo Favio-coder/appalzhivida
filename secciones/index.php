@@ -1,19 +1,9 @@
 <?php include("../templates/cabecera.php"); ?>
 
-<div class="p-5 mb-4 bg-light rounded-3">
-    <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-        <p class="col-md-8 fs-4">
-            Using a series of utilities, you can create this jumbotron, just
-            like the one in previous versions of Bootstrap. Check out the
-            examples below for how you can remix and restyle it to your liking.
-        </p>
-        <button class="btn btn-primary btn-lg" type="button">
-            Example button
-        </button>
-    </div>
-</div>
-
+    <p>Bienvenido a la aplicación </p>
+   <a href="../secciones/vista_curso.php">Ir cursos</a>
+    <a href="../secciones/vista_alumnos.php">Ir alumnos</a>
+    <a href="../secciones/pacientes.php">Ir pacientes</a>
 <?php include("../templates/cabecera_volver.php"); ?> 
 <?php include("../templates/pie.php"); ?>   
 

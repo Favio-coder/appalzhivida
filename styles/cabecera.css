@@ -1,78 +1,77 @@
-body{
-    background-color: blueviolet;
+body {
+    background-color: #5944CD; /* Color de fondo del cuerpo */
 }
 
-
-
-.cabecera-usuario{
+.cabecera-usuario {
     display: flex;
     flex-direction: row-reverse;
-    align-content: stretch;
-    justify-content: flex-start;
-    align-items: baseline;
-    background-color: #9269DD
+    align-items: baseline; /* Alinea los elementos en la línea base */
+    background-color: #5944CD; /* Color de fondo de la cabecera de usuario */
 }
 
-.cabecera-usuario p{
-    color: white;
-    margin-right: 3px;
+.cabecera-usuario p {
+    color: white; /* Color de texto para los párrafos dentro de la cabecera del usuario */
+    margin-right: 3px; /* Margen a la derecha para los párrafos dentro de la cabecera del usuario */
 }
 
-h1{
-    background-color: #9269DD;
-    margin-left: 10px;
-    color:white;
+h1 {
+    background-color: #5944CD; /* Color de fondo para los encabezados h1 */
+    margin-left: 10px; /* Margen izquierdo para los encabezados h1 */
+    color: white; /* Color de texto para los encabezados h1 */
 }
 
-#titulo-categorias{
-    color: #fffff0f5;
+#titulo-categorias {
+    color: #fffff0f5; /* Color de texto para el título de categorías */
 }
 
-
-.cabecera-global{
-    background-color: #9269DD;
+.cabecera-global {
+    background-color: #5944CD; /* Color de fondo de la cabecera global */
 }
 
-.cabecera .cabecera-usuario img{
-    width: 80px;
+.cabecera .cabecera-usuario img {
+    width: 80px; /* Ancho de la imagen dentro de la cabecera */
 }
 
-.cabecera-categorias{
+.cabecera-categorias {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: space-around;
-    align-items: flex-end;
-    background-color: #9269DD
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+    justify-content: space-around; /* Distribuye uniformemente los elementos a lo largo del contenedor */
+    align-items: flex-end; /* Alinea los elementos en la parte inferior del contenedor */
+    background-color: rgba(89, 68, 205, 0.87); /* Color de fondo de la cabecera de categorías */
 }
 
-#subtitulo-categoria{
-    color: whitesmoke;
-    margin-top: 15px;
+#subtitulo-categoria {
+    color: whitesmoke; /* Color de texto para el subtítulo de categorías */
+    margin-top: 15px; /* Margen superior para el subtítulo de categorías */
 }
 
 /* Cambiar el color del SVG */
 .iconos-boton path {
-    fill: black; /* Cambia el color del SVG a rojo */
+    fill: black; /* Cambia el color del SVG */
 }
 
 /* Cambiar el tamaño del SVG */
 .iconos-boton {
-    width: 50px; /* Cambia el ancho del SVG a 50px */
-    height: 50px; /* Cambia la altura del SVG a 50px */
-    text-align: center;
+    width: 50px; /* Ancho del SVG */
+    height: 50px; /* Altura del SVG */
 }
 
-/* Centrar horizontalmente el contenido */
-.boton-especialistas, .boton-azlhibot, .boton-interactua, .boton-paciente {
-    text-align: center;
-    background-color: white;
+/* Centrar horizontalmente el contenido dentro de los botones */
+.boton-especialistas,
+.boton-azlhibot,
+.boton-interactua,
+.boton-paciente {
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    background-color: white; /* Color de fondo de los botones */
+    border-radius: 10% 0 10% 0; /* Radio de borde del botón */
+    width: 67px; /* Ancho del botón */
+    height: 57px; /* Altura del botón */
+    line-height: 20px; /* Altura de línea para el contenido dentro del botón */
+    border-radius: 9px; /* Radio de borde para el botón */
+    box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.4); /* Sombra del botón */
+    border: 1px solid rgba(187, 187, 187, 1); /* Borde del botón */
+    padding-bottom: 0; /* Padding inferior del botón */
 }
-
-
-
-    
-
-
 

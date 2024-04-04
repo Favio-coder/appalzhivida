@@ -8,8 +8,8 @@ class BD {
             $opciones = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
             //Conexión BD-Nombre de DB-Usuario-Contraseña
             try {
-                self::$instancia = new PDO('mysql:host=localhost;dbname=aplicacion', 'root', '', $opciones);
-                echo "Conexión de base de datos exitoso";
+                self::$instancia = new PDO('mysql:host=localhost;dbname=app', 'root', '', $opciones);
+                
             } catch (PDOException $e) {
                 echo "Error de conexión: " . $e->getMessage();
                 // Importante: devolver null si hay un error en la conexión

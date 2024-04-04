@@ -56,7 +56,7 @@
 
         <div class="categoria-paciente">
             <div class="boton-paciente">
-            <a href="">
+            <a href="../secciones/vista_pacientes.php">
                 <img src="../assets/interactua.svg" class="iconos-boton" alt="">
             </a>
             </div>

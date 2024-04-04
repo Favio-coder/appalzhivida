@@ -1,5 +1,5 @@
 <?php include("../templates/cabecera.php"); ?>
-
+    
 <link rel="stylesheet" href="../styles/vistaCurso.css">
 <?php include("../secciones/cursos.php"); ?>
 <div class="container">

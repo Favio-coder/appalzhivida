@@ -1,4 +1,19 @@
-<?php include("auth/login.php"); ?>
+<?php 
+session_start();
+if($_POST){
+    if($_POST["usuario"]=="favioam" && $_POST["contraseña"]="1234"){
+        
+        $_SESSION["usuario"] = $_POST["usuario"];
+        header("location: secciones/index.php");
+        $mensaje = "login correto";
+    }
+    else{
+        $mensaje = "login incorrecto";
+    }
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -18,6 +33,10 @@
 
 <body>
 
+        <?php if(isset($mensaje)): ?>
+            <p><?php echo $mensaje; ?></p>
+        <?php endif; ?>
+
     <div class="imagen-cabecera">
         <img src="./assets/logo-ancianos copy.png" alt="">
     </div>
@@ -32,7 +51,7 @@
             <img src="./assets/logo_alzhivida.png" alt="logo-alzhivida">
         </div>
 
-        <form action="secciones/index.php" method="post">
+        <form action="" method="post">
             <div class="box-input">
                 <input type="text" id="usuario" name="usuario" placeholder="Usuario">
             </div>
@@ -47,24 +66,7 @@
             </div>
         </form>
     </div>
-    <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach($listaUsuarios as $usuario) { ?>
-                    <tr>
-                        <td scope="row"><?php echo $usuario['idUsuario']; ?></td>
-                        <td><?php echo $usuario['nombre']; ?></td>
-                        <td><?php echo $usuario['usuario']; ?></td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+    
 
     <script src="./JS/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

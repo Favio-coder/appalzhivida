@@ -1,0 +1,307 @@
+.cabecera-paciente {
+    display: flex;
+    align-items: center;
+}
+
+.imagen-paciente img {
+
+    width: 6rem;
+    height: 6rem;
+
+}
+
+.cabecera-paciente p {
+    font-size: 3rem;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Estilo de ventana emergente para pacientes*/
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+.contenido-ventana {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.contenido-ventana h2 {
+    justify-content: center;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    border: 1px solid gray;
+    height: 2rem;
+    padding-right: 8rem;
+}
+
+/* Estilo personalizado para el control deslizante */
+input[type=range] {
+    -webkit-appearance: none;
+    /* Elimina los estilos predeterminados del navegador */
+    width: 100%;
+    /* Ancho del control deslizante */
+    height: 10px;
+    /* Grosor de la barra del control deslizante */
+    background: #ddd;
+    /* Color de fondo de la barra del control deslizante */
+    border-radius: 5px;
+    /* Radio de borde para suavizar las esquinas */
+    outline: none;
+    /* Elimina el contorno predeterminado del navegador */
+    margin: 10px 0;
+    /* Margen superior e inferior */
+}
+
+/* Estilo personalizado para el pulgar del control deslizante */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Elimina los estilos predeterminados del navegador */
+    width: 20px;
+    /* Ancho del pulgar */
+    height: 20px;
+    /* Altura del pulgar */
+    background: #5944CD;
+    /* Color de fondo del pulgar */
+    border-radius: 50%;
+    /* Hace que el pulgar sea redondeado */
+    cursor: pointer;
+    /* Cambia el cursor al puntero cuando se coloca sobre el pulgar */
+    border: none;
+    /* Elimina el borde del pulgar */
+}
+
+input[type="submit"] {
+    background-color: #5944CD;
+    border: 1px solid #5944CD;
+    height: 2rem;
+    color: white;
+}
+
+.genero-ventana-emergente {
+    display: flex;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para centrar el botón */
+.boton-agregar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Esto puede ser redundante en este contexto */
+}
+
+.boton-agregar button {
+    color: white;
+    border: 1px solid #5944CD;
+    background-color: #5944CD;
+    padding: 10px 20px;
+    cursor: pointer;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+
+/*Tarjeta de pacientes*/
+.contenedor-pacientes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.paciente-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #585861;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(187, 187, 187, 1);
+    margin-top: 20px;
+}
+
+.pacientes-card-imagen {
+    display: flex;
+    margin-right: 20px;
+    /* Espacio entre el icono y el texto */
+    border: 2px solid #5c5b63;
+
+}
+
+.pacientes-card-imagen i {
+    color: rgb(23, 23, 99);
+    /* Cambiar el color del icono a azul */
+    font-size: 36px;
+    /* Cambiar el tamaño del icono */
+    background-color: rgb(228, 229, 234);
+    /* Cambiar el color de fondo de la imagen a celeste */
+    padding: 10px;
+    /* Añadir relleno para aumentar el tamaño de la imagen */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+/* Estilos adicionales para el texto */
+.paciente-datos {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    /* Alinea el texto a la derecha */
+}
+
+.paciente-datos .eliminar_paciente{
+    margin-bottom: 10px;
+    background-color: #dc3545; /* Color rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+
+.paciente-datos .eliminar_paciente:hover {
+    background-color: #c82333; /* Cambia el color de fondo en el hover */
+}
+
+.paciente-datos .eliminar_paciente i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+#eliminar_paciente{
+    margin-bottom: 10px;
+    background-color: #dc3545; /* Color rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+#eliminar_paciente:hover{
+    background-color: #c82333; /* Cambia el color de fondo en el hover */
+}
+
+#cancelar-paciente{
+    margin-bottom: 10px;
+    background-color: #282bc5; /* Color rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+#cancelar-paciente:hover{
+    background-color: #4244c9; /* Color rojo */
+}
+
+.paciente-datos .editar_paciente {
+    margin-bottom: 10px;
+    background-color: #4CAF50; /* Color verde */
+    color: white; /* Texto en color blanco */
+    padding: 5px 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor al pasar sobre el botón */
+}
+
+.paciente-datos .editar_paciente:hover {
+    background-color: #45a049; /* Cambio de color al pasar el ratón sobre el botón */
+}
+
+.paciente-datos .editar_paciente i{
+    margin-right: 5px;
+}
+
+
+.Masculino i {
+    color: blue; /* Cambiar a color azul para género masculino */
+}
+
+.Femenino i {
+    color: rgb(191, 44, 169); /* Cambiar a color rosa para género femenino */
+}
+
+.acciones-paciente {
+    display: flex; /* Utiliza el modelo de caja flexible */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.acciones-paciente button {
+    flex: 1; /* Los botones ocupan el mismo ancho */
+}
+
+
+.contenido-ventana {
+    text-align: center;
+}
+
+.contenido-ventana p {
+    margin-bottom: 20px;
+}
+
+.contenido-ventana button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenido-ventana button:hover {
+    background-color: #ddd;
+}
+
+.mensaje-advertencia {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posicionado de forma fija */
+    top: 50%; /* A la mitad de la altura de la ventana */
+    left: 50%; /* A la mitad del ancho de la ventana */
+    transform: translate(-50%, -50%); /* Centrado horizontal y vertical */
+    background-color: #f8d7da; /* Color de fondo */
+    color: #721c24; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #f5c6cb; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1000; /* Capa superior */
+}
+
+/* Estilos para el icono */
+.icono-advertencia {
+    font-size: 24px; /* Tamaño del icono */
+    margin-right: 10px; /* Espaciado derecho */
+}
