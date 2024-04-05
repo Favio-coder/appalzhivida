@@ -1,0 +1,22 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Para evitar la barra de desplazamiento horizontal */
+}
+
+.cabecera-tendencias {
+    width: 100%; /* La cabecera ocupa todo el ancho */
+    height: 20vh; /* La altura de la cabecera es igual al 100% del viewport */
+    overflow: hidden; /* Para asegurar que la imagen no se desborde */
+    position: relative; /* Posición relativa para que el contenido interno pueda posicionarse de manera absoluta */
+}
+
+.imagen-tendencia {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: auto; /* Se ajusta automáticamente la altura para mantener la proporción */
+    position: absolute; /* Posicionamiento absoluto dentro de su contenedor */
+    top: 50%; /* Posicionamiento vertical en el centro */
+    left: 50%; /* Posicionamiento horizontal en el centro */
+    transform: translate(-50%, -50%); /* Centra la imagen */
+}

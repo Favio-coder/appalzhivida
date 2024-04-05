@@ -84,21 +84,75 @@ include ("../secciones/pacientes.php");
                     required><br><br>
                 <div class="genero-ventana-emergente">
                     <label>Género:</label><br>
-                    <label><input type="radio" id="genero_paciente" name="genero_paciente" value="Masculino">
+                    <label><input type="radio" id="genero_paciente_masculino" name="genero_paciente" value="Masculino">
                         Masculino</label><br>
-                    <label><input type="radio" id="genero_paciente" name="genero_paciente" value="Femenino">
+                    <label><input type="radio" id="genero_paciente_femenino" name="genero_paciente" value="Femenino">
                         Femenino</label><br><br>
                 </div>
                 <div class="edad-ventana-emergente">
                     <label for="edad">Edad:</label>
                     <br>
                     <input type="range" id="edad_paciente" name="edad_paciente" min="0" max="100" value="0"
-                        oninput="mostrarEdad()">
+                        oninput="mostrarEdad()" onchange="verificarCampos()">
                     <span id="edadMostrada">0</span> años<br><br>
                 </div>
+
                 <!-- Agrega un campo oculto para almacenar el estado del paciente -->
                 <input type="hidden" id="estado_paciente" name="estado_paciente">
-                <button type="button" onclick="abrirVentanaCuestionario()">Medir estado</button>
+                <div id="container-test" class="container-test" style="display:none">
+                    <div class="pregunta">
+                        <label>1. Capacidad para realizar actividades diarias:</label><br>
+                        <label><input type="radio" name="pregunta1" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta1" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>2. Funcionamiento cognitivo:</label><br>
+                        <label><input type="radio" name="pregunta2" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta2" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>3. Comportamiento social:</label><br>
+                        <label><input type="radio" name="pregunta3" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta3" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>4. Orientación espacial y temporal:</label><br>
+                        <label><input type="radio" name="pregunta4" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta4" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>5. Capacidad para comunicarse:</label><br>
+                        <label><input type="radio" name="pregunta5" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta5" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>6. Problemas de memoria a largo plazo:</label><br>
+                        <label><input type="radio" name="pregunta6" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta6" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>7. Dependencia en las actividades de la vida diaria:</label><br>
+                        <label><input type="radio" name="pregunta7" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta7" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>8. Problemas de razonamiento y toma de decisiones:</label><br>
+                        <label><input type="radio" name="pregunta8" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta8" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>9. Cambios en la personalidad y el estado de ánimo:</label><br>
+                        <label><input type="radio" name="pregunta9" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta9" value="No"> No</label><br>
+                    </div>
+                    <div class="pregunta">
+                        <label>10. Necesidad de supervisión constante:</label><br>
+                        <label><input type="radio" name="pregunta10" value="Sí"> Sí</label>
+                        <label><input type="radio" name="pregunta10" value="No"> No</label><br>
+                    </div>
+                </div>
+
+
                 <button type="submit" name="accion" value="agregar">
                     Añadir
                 </button>
@@ -106,73 +160,7 @@ include ("../secciones/pacientes.php");
         </div>
     </div>
 
-    <!-- Ventana emergente para el cuestionario -->
-    <div id="ventana-cuestionario" class="ventana-emergente" style="display: none;">
-        <div class="contenido-ventana">
-            <span class="cerrar" onclick="cerrarVentanaCuestionario()">×</span>
-            <h2>Cuestionario de Evaluación de Fase</h2>
-            <p>Por favor, responde las siguientes preguntas basadas en las observaciones y experiencias que has tenido
-                con el paciente en las últimas semanas.</p>
-            <!-- Aquí pega el código HTML del cuestionario -->
-            <form action="" method="post" id="formulario-cuestionario">
-                <div class="pregunta">
-                    <label>1. Capacidad para realizar actividades diarias:</label><br>
-                    <label><input type="radio" name="pregunta1" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta1" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>2. Funcionamiento cognitivo:</label><br>
-                    <label><input type="radio" name="pregunta2" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta2" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>3. Comportamiento social:</label><br>
-                    <label><input type="radio" name="pregunta3" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta3" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>4. Orientación espacial y temporal:</label><br>
-                    <label><input type="radio" name="pregunta4" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta4" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>5. Capacidad para comunicarse:</label><br>
-                    <label><input type="radio" name="pregunta5" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta5" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>6. Problemas de memoria a largo plazo:</label><br>
-                    <label><input type="radio" name="pregunta6" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta6" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>7. Dependencia en las actividades de la vida diaria:</label><br>
-                    <label><input type="radio" name="pregunta7" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta7" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>8. Problemas de razonamiento y toma de decisiones:</label><br>
-                    <label><input type="radio" name="pregunta8" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta8" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>9. Cambios en la personalidad y el estado de ánimo:</label><br>
-                    <label><input type="radio" name="pregunta9" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta9" value="No"> No</label><br>
-                </div>
-                <div class="pregunta">
-                    <label>10. Necesidad de supervisión constante:</label><br>
-                    <label><input type="radio" name="pregunta10" value="Sí"> Sí</label>
-                    <label><input type="radio" name="pregunta10" value="No"> No</label><br>
-                </div>
-                
 
-                <button type="button" name="accion" value="evaluar" id="evaluar_paciente" onclick="evaluarCuestionario()">
-                    Evaluar
-                </button>
-            </form>
-        </div>
-    </div>
 
 
     <!-- Contenido de la ventana emergente para confirmar la eliminación-->
@@ -232,47 +220,38 @@ include ("../secciones/pacientes.php");
         }
 
 
-        function evaluarCuestionario() {
-        // Verificar si todas las preguntas han sido respondidas
-        var todasRespondidas = true;
-        var contador = 0;
-        var preguntas = document.querySelectorAll('.pregunta input[type="radio"]');
-        preguntas.forEach(function (pregunta) {
-            var nombrePregunta = pregunta.name;
-            if (!document.querySelector('input[name="' + nombrePregunta + '"]:checked')) {
-                todasRespondidas = false;
-            }
-        });
-
-        // Si todas las preguntas han sido respondidas, realizar la evaluación
-        if (todasRespondidas) {
-            preguntas.forEach(function (pregunta) {
-                var nombrePregunta = pregunta.name;
-                var pregunta_paciente = document.querySelector('input[name="' + nombrePregunta + '"]:checked').value;
-
-                if (pregunta_paciente == "Sí") {
-                    contador++;
-                }
-            });
-
-            var estado = "";
-            if (contador >= 0 && contador <= 3) {
-                estado = "Fase leve";
-            } else if (contador >= 4 && contador <= 6) {
-                estado = "Fase moderada";
-            } else {
-                estado = "Fase avanzada";
-            }
-
-            // Establecer el valor del campo oculto
-            document.getElementById("estado_paciente").value = estado;
-
-            // Enviar el formulario
-            document.getElementById("formulario-cuestionario").submit();
-        } else {
-            alert("Por favor, responde todas las preguntas antes de evaluar.");
+        function mostrarVentanaTest() {
+            document.getElementById("container-test").style.display = "block";
         }
-    }
+
+
+        function verificarCampos() {
+            var nombre = document.getElementById("nombre_paciente").value;
+            var apellido = document.getElementById("apellido_paciente").value;
+            var generoMasculino = document.getElementById("genero_paciente_masculino").checked;
+            var generoFemenino = document.getElementById("genero_paciente_femenino").checked;
+            var edad = document.getElementById("edad_paciente").value;
+            var evaluarPreguntas = false;
+
+            // Verificar si todos los campos obligatorios están llenos
+            if (nombre !== "" && apellido !== "" && (generoMasculino || generoFemenino) && edad !== "") {
+                // Mostrar la ventana emergente container-test
+                console.log("Cuestionario realizado");
+                evaluarPreguntas = true;
+                // Llamada a la función y almacenamiento del resultado
+                var camposValidos = verificarCampos();
+            }
+
+            return evaluarPreguntas;
+            aparecerTest();
+        }
+
+        function aparecerTest(){
+            document.getElementById(container-test).style.display = 'block';
+        }
+        
+
+       
 
 
 

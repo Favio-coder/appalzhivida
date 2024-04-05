@@ -1,0 +1,48 @@
+.titulo-bienvenido {
+    color: black;
+    background-color: white;
+    justify-content: center; /* No necesitas esta línea si no estás usando display: flex; en este selector */
+    align-items: center; /* No necesitas esta línea si no estás usando display: flex; en este selector */
+    text-align: center;
+}
+
+#boton-publicacion{
+    background: #9466f0;
+    color:white;
+    border: 1px solid #9466f0;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.titulo-tendencias {
+    color: black;
+    background-color: white;
+}
+
+.contenedor-tendencias {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flexbox a vertical */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.tendencias {
+    margin-bottom: 20px; /* Espacio entre los contenedores de tendencias */
+}
+
+.img-tendencias {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: auto; /* Centra la imagen horizontal y verticalmente */
+}
+
+@media (max-width: 400px) {
+    .tendencias {
+        width: 90%;
+    }
+
+    .img-tendencias {
+        width: 100%;
+    }
+}
